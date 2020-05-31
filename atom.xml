@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://github.com/CNKI-LaoMa</id>
+    <id>https://cnki-laoma.github.io/Smart-Medicine/</id>
     <title>智慧医药的设计思维</title>
-    <updated>2020-05-31T04:55:50.658Z</updated>
+    <updated>2020-05-31T05:21:28.111Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://github.com/CNKI-LaoMa"/>
-    <link rel="self" href="https://github.com/CNKI-LaoMa/atom.xml"/>
+    <link rel="alternate" href="https://cnki-laoma.github.io/Smart-Medicine/"/>
+    <link rel="self" href="https://cnki-laoma.github.io/Smart-Medicine/atom.xml"/>
     <subtitle>Design Thinking for Smart Medicine</subtitle>
-    <logo>https://github.com/CNKI-LaoMa/images/avatar.png</logo>
-    <icon>https://github.com/CNKI-LaoMa/favicon.ico</icon>
+    <logo>https://cnki-laoma.github.io/Smart-Medicine/images/avatar.png</logo>
+    <icon>https://cnki-laoma.github.io/Smart-Medicine/favicon.ico</icon>
     <rights>All rights reserved 2020, 智慧医药的设计思维</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://github.com/CNKI-LaoMa/post/hello-gridea/</id>
-        <link href="https://github.com/CNKI-LaoMa/post/hello-gridea/">
+        <id>https://cnki-laoma.github.io/Smart-Medicine/post/hello-gridea/</id>
+        <link href="https://cnki-laoma.github.io/Smart-Medicine/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
