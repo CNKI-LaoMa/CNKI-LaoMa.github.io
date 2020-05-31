@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cnki-laoma.github.io</id>
-    <title>医药知识挖掘分析 设计思维</title>
-    <updated>2020-05-31T09:35:29.207Z</updated>
+    <title>医药知识挖掘分析的设计思维</title>
+    <updated>2020-05-31T09:50:19.308Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cnki-laoma.github.io"/>
     <link rel="self" href="https://cnki-laoma.github.io/atom.xml"/>
     <subtitle>Design Thinking for Smart Medicine</subtitle>
     <logo>https://cnki-laoma.github.io/images/avatar.png</logo>
     <icon>https://cnki-laoma.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 医药知识挖掘分析 设计思维</rights>
+    <rights>All rights reserved 2020, 医药知识挖掘分析的设计思维</rights>
     <entry>
         <title type="html"><![CDATA[【资源】医药类免费图书：Springer出版，33种]]></title>
         <id>https://cnki-laoma.github.io/post/springerbooks/</id>
         <link href="https://cnki-laoma.github.io/post/springerbooks/">
         </link>
         <updated>2020-05-02T16:00:00.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<p>新冠疫情期，知名出版商施普林格（Springer）宣布<a href="https://www.springernature.com/gp/librarians/news-events/all-news-articles/industry-news-initiatives/free-access-to-textbooks-for-institutions-affected-by-coronaviru/17855960">开放500多本专业教材和图书</a>，涵盖多个不同学科领域，读者可免费下载pdf及Epub文件。</p>
-<!-- more -->
+        <content type="html"><![CDATA[<p>新冠疫情期，知名出版商施普林格（Springer）宣布<a href="https://www.springernature.com/gp/librarians/news-events/all-news-articles/industry-news-initiatives/free-access-to-textbooks-for-institutions-affected-by-coronaviru/17855960">开放500多本专业教材和图书</a>，涵盖多个不同学科领域，读者可免费下载pdf及Epub文件。</p>
 <p>按其官网上提供的<a href="https://resource-cms.springernature.com/springer-cms/rest/v1/content/17858272/data/v4">书目清单</a>，英文版总共有408种。我从其中选出近10年出版的部分医药专业图书（大部分是研究生及本科高年级教材），加上部分不在清单里但也免费的，共33种，整理如下，方便大家学习参考：</p>
 <ul>
 <li>
