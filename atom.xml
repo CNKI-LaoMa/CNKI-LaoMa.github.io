@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cnki-laoma.github.io</id>
-    <title>医药知识服务的  设计思维</title>
-    <updated>2020-05-31T09:11:35.428Z</updated>
+    <title>医药知识挖掘分析的设计思维</title>
+    <updated>2020-05-31T09:29:30.475Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cnki-laoma.github.io"/>
     <link rel="self" href="https://cnki-laoma.github.io/atom.xml"/>
     <subtitle>Design Thinking for Smart Medicine</subtitle>
     <logo>https://cnki-laoma.github.io/images/avatar.png</logo>
     <icon>https://cnki-laoma.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 医药知识服务的  设计思维</rights>
+    <rights>All rights reserved 2020, 医药知识挖掘分析的设计思维</rights>
     <entry>
         <title type="html"><![CDATA[【资源】医药类免费图书：Springer出版，33种]]></title>
         <id>https://cnki-laoma.github.io/post/springerbooks/</id>
