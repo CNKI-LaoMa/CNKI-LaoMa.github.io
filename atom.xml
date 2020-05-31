@@ -1,45 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://cnki-laoma.github.io/Smart-Medicine/</id>
+    <id>https://cnki-laoma.github.io</id>
     <title>医药知识服务的  设计思维</title>
-    <updated>2020-05-31T06:41:00.483Z</updated>
+    <updated>2020-05-31T09:11:35.428Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://cnki-laoma.github.io/Smart-Medicine/"/>
-    <link rel="self" href="https://cnki-laoma.github.io/Smart-Medicine/atom.xml"/>
+    <link rel="alternate" href="https://cnki-laoma.github.io"/>
+    <link rel="self" href="https://cnki-laoma.github.io/atom.xml"/>
     <subtitle>Design Thinking for Smart Medicine</subtitle>
-    <logo>https://cnki-laoma.github.io/Smart-Medicine/images/avatar.png</logo>
-    <icon>https://cnki-laoma.github.io/Smart-Medicine/favicon.ico</icon>
+    <logo>https://cnki-laoma.github.io/images/avatar.png</logo>
+    <icon>https://cnki-laoma.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 医药知识服务的  设计思维</rights>
     <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://cnki-laoma.github.io/Smart-Medicine/post/hello-gridea/</id>
-        <link href="https://cnki-laoma.github.io/Smart-Medicine/post/hello-gridea/">
+        <title type="html"><![CDATA[【资源】医药类免费图书：Springer出版，33种]]></title>
+        <id>https://cnki-laoma.github.io/post/springerbooks/</id>
+        <link href="https://cnki-laoma.github.io/post/springerbooks/">
         </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <updated>2020-05-02T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>新冠疫情期，知名出版商施普林格（Springer）宣布<a href="https://www.springernature.com/gp/librarians/news-events/all-news-articles/industry-news-initiatives/free-access-to-textbooks-for-institutions-affected-by-coronaviru/17855960">开放500多本专业教材和图书</a>，涵盖多个不同学科领域，读者可免费下载pdf及Epub文件。</p>
 <!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+<p>按其官网上提供的<a href="https://resource-cms.springernature.com/springer-cms/rest/v1/content/17858272/data/v4">书目清单</a>，英文版总共有408种。我从其中选出近10年出版的部分医药专业图书（大部分是研究生及本科高年级教材），加上部分不在清单里但也免费的，共33种，整理如下，方便大家学习参考：</p>
+<ul>
+<li>
+<p><strong>Make Life Visible</strong>  2020<br>
+<a href="https://doi.org/10.1007/978-981-13-7908-6">https://doi.org/10.1007/978-981-13-7908-6</a></p>
+</li>
+<li>
+<p><strong>Good Research Practice in Non-Clinical Pharmacology and Biomedicine</strong>  2020<br>
+<a href="https://doi.org/10.1007/978-3-030-33656-1">https://doi.org/10.1007/978-3-030-33656-1</a></p>
+</li>
+<li>
+<p><strong>Bioimage Data Analysis Workflows</strong>  2020<br>
+<a href="https://doi.org/10.1007/978-3-030-22386-1">https://doi.org/10.1007/978-3-030-22386-1</a></p>
+</li>
+<li>
+<p><strong>Coronavirus Disease 2019 (COVID-19) : Epidemiology, Pathogenesis, Diagnosis, and Therapeutics</strong>  2020<br>
+<a href="https://doi.org/10.1007/978-981-15-4814-7">https://doi.org/10.1007/978-981-15-4814-7</a><br>
+<img src="https://media.springernature.com/w306/springer-static/cover-hires/book/978-981-15-4814-7" alt="Coronavirus Disease 2019 (COVID-19) " loading="lazy"></p>
+</li>
+<li>
+<p><strong>MERS Coronavirus : Methods and Protocols</strong>  2020<br>
+<a href="https://doi.org/10.1007/978-1-0716-0211-9">https://doi.org/10.1007/978-1-0716-0211-9</a></p>
+</li>
+<li>
+<p><strong>Data and Text Processing for Health and Life Sciences</strong>  2019<br>
+<a href="https://doi.org/10.1007/978-3-030-13845-5">https://doi.org/10.1007/978-3-030-13845-5</a><br>
+<img src="https://media.springernature.com/w306/springer-static/cover-hires/book/978-3-030-13845-5" alt="Data and Text Processing for Health and Life Sciences" loading="lazy"></p>
+</li>
+<li>
+<p><strong>Understanding Statistics and Experimental Design</strong>  2019<br>
+<a href="https://doi.org/10.1007/978-3-030-03499-3">https://doi.org/10.1007/978-3-030-03499-3</a></p>
+</li>
+<li>
+<p><strong>Fundamentals of Clinical Data Science</strong>  2019<br>
+<a href="http://doi.org/10.1007/978-3-319-99713-1">http://doi.org/10.1007/978-3-319-99713-1</a></p>
+</li>
+<li>
+<p><strong>Pharmaceutical Biotechnology</strong>  5th ed. 2019<br>
+(此书第5版虽在清单里但尚未免费，后面有第四版)<br>
+<a href="http://doi.org/10.1007/978-3-030-00710-2">http://doi.org/10.1007/978-3-030-00710-2</a></p>
+</li>
+<li>
+<p><strong>Pharmaceutical Biotechnology</strong>  4th ed. 2013<br>
+<a href="http://doi.org/10.1007/978-1-4614-6486-0">http://doi.org/10.1007/978-1-4614-6486-0</a></p>
+</li>
+<li>
+<p><strong>Spine Surgery</strong> 1st ed. 2019<br>
+<a href="http://doi.org/10.1007/978-3-319-98875-7">http://doi.org/10.1007/978-3-319-98875-7</a></p>
+</li>
+<li>
+<p><strong>Applied Bioinformatics</strong>  2nd ed. 2018<br>
+<a href="http://doi.org/10.1007/978-3-319-68301-0">http://doi.org/10.1007/978-3-319-68301-0</a></p>
+</li>
+<li>
+<p><strong>Genome Editing in Neurosciences</strong>  2017<br>
+<a href="https://doi.org/10.1007/978-3-319-60192-2">https://doi.org/10.1007/978-3-319-60192-2</a></p>
+</li>
+<li>
+<p><strong>Evidence-Based Critical Care</strong>  1st ed. 2017<br>
+<a href="http://doi.org/10.1007/978-3-319-43341-7">http://doi.org/10.1007/978-3-319-43341-7</a></p>
+</li>
+<li>
+<p><strong>Phylogenomics</strong>  1st ed. 2017<br>
+<a href="http://doi.org/10.1007/978-3-319-54064-1">http://doi.org/10.1007/978-3-319-54064-1</a></p>
+</li>
+<li>
+<p><strong>Fundamentals of Biomechanics</strong>  4th ed. 2017<br>
+<a href="http://doi.org/10.1007/978-3-319-44738-4">http://doi.org/10.1007/978-3-319-44738-4</a></p>
+</li>
+<li>
+<p><strong>Cardiovascular Biomechanics</strong>  1st ed. 2017<br>
+<a href="http://doi.org/10.1007/978-3-319-46407-7">http://doi.org/10.1007/978-3-319-46407-7</a></p>
+</li>
+<li>
+<p><strong>Breast Cancer</strong> 1st ed. 2017<br>
+<a href="http://doi.org/10.1007/978-3-319-48848-6">http://doi.org/10.1007/978-3-319-48848-6</a></p>
+</li>
+<li>
+<p><strong>The ASCRS Textbook of Colon and Rectal Surgery</strong> 3rd ed. 2016<br>
+<a href="http://doi.org/10.1007/978-3-319-25970-3">http://doi.org/10.1007/978-3-319-25970-3</a></p>
+</li>
+<li>
+<p><strong>A Time for Metabolism and Hormones</strong>  2016<br>
+<a href="https://doi.org/10.1007/978-3-319-27069-2">https://doi.org/10.1007/978-3-319-27069-2</a></p>
+</li>
+<li>
+<p><strong>SPSS for Starters and 2nd Levelers</strong> 2nd ed. 2016<br>
+<a href="http://doi.org/10.1007/978-3-319-20600-4">http://doi.org/10.1007/978-3-319-20600-4</a></p>
+</li>
+<li>
+<p><strong>Evolutionary Thinking in Medicine</strong> 1st ed. 2016<br>
+<a href="http://doi.org/10.1007/978-3-319-29716-3">http://doi.org/10.1007/978-3-319-29716-3</a></p>
+</li>
+<li>
+<p><strong>Essentials of Cerebellum and Cerebellar Disorders</strong> 1st ed. 2016<br>
+<a href="http://doi.org/10.1007/978-3-319-24551-5">http://doi.org/10.1007/978-3-319-24551-5</a></p>
+</li>
+<li>
+<p><strong>Clinical Data Analysis on a Pocket Calculator</strong> 2nd ed. 2016<br>
+<a href="http://doi.org/10.1007/978-3-319-27104-0">http://doi.org/10.1007/978-3-319-27104-0</a></p>
+</li>
+<li>
+<p><strong>Innovative Medicine</strong>  2015<br>
+<a href="https://doi.org/10.1007/978-4-431-55651-0">https://doi.org/10.1007/978-4-431-55651-0</a></p>
+</li>
+<li>
+<p><strong>Machine Learning in Medicine - a Complete Overview</strong>  2015<br>
+<a href="http://doi.org/10.1007/978-3-319-15195-3">http://doi.org/10.1007/978-3-319-15195-3</a><br>
+<img src="https://media.springernature.com/w306/springer-static/cover-hires/book/978-3-319-15195-3" alt="Machine Learning in Medicine - a Complete Overview" loading="lazy"></p>
+</li>
+<li>
+<p><strong>Handbook of Cardiac Anatomy, Physiology, and Devices</strong> 3rd ed. 2015<br>
+<a href="http://doi.org/10.1007/978-3-319-19464-6">http://doi.org/10.1007/978-3-319-19464-6</a></p>
+</li>
+<li>
+<p><strong>Integrative Human Biochemistry</strong>  1st ed. 2015<br>
+<a href="http://doi.org/10.1007/978-1-4939-3058-6">http://doi.org/10.1007/978-1-4939-3058-6</a></p>
+</li>
+<li>
+<p><strong>Biomedical Informatics</strong>  4th ed. 2014<br>
+<a href="http://doi.org/10.1007/978-1-4471-4474-8">http://doi.org/10.1007/978-1-4471-4474-8</a></p>
+</li>
+<li>
+<p><strong>The Gastrointestinal System</strong>  2014<br>
+<a href="http://doi.org/10.1007/978-94-017-8771-0">http://doi.org/10.1007/978-94-017-8771-0</a></p>
+</li>
+<li>
+<p><strong>Metabolism of Human Diseases</strong> 2014<br>
+<a href="http://doi.org/10.1007/978-3-7091-0715-7">http://doi.org/10.1007/978-3-7091-0715-7</a></p>
+</li>
+<li>
+<p><strong>Statistical Analysis of Clinical Data on a Pocket Calculator</strong>  2011<br>
+<a href="http://doi.org/10.1007/978-94-007-1211-9">http://doi.org/10.1007/978-94-007-1211-9</a></p>
+</li>
+<li>
+<p><strong>Epidemiological Research: Terms and Concepts</strong> 2011<br>
+<a href="http://doi.org/10.1007/978-94-007-1171-6">http://doi.org/10.1007/978-94-007-1171-6</a></p>
+</li>
+</ul>
 ]]></content>
     </entry>
 </feed>
