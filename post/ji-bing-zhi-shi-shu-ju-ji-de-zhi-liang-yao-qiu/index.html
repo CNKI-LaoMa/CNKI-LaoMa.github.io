@@ -30,41 +30,9 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            Design Thinking for Smart Medicine
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-                <a href="https://github.com/CNKI-LaoMa" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="ri-github-line"></i>
-                </a>
-              
-            
-              
-            
-              
-                <a href="https://weibo.com/bookscent/" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="ri-weibo-line"></i>
-                </a>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-                <a href="839366005" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="ri-qq-line"></i>
-                </a>
-              
+          <div class="toc-container hidden lg:block">
             
           </div>
         </div>
@@ -109,28 +77,76 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="ri-bookmark-line"></i> 文档格式
-        </h2>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">疾病知识数据集的质量要求</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-09-07 by 马学海 / 1 min read
+        </div>
         
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-    
-    <div class="content">
-      <a href="https://cnki-laoma.github.io/post/wei-shi-me-epub-bu-ru-pdf-cheng-gong/">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">为什么EPub不如PDF成功</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        
-      </div>
-      <div class="text-gray-400 text-sm font-light">2020-06-07 by 马学海 / 9 min read</div>
-    </div>
-  </section>
+        <div class="post-content yue">
+          <p><strong>完整性</strong>：是指数据信息是否完整，是否存在缺失情况。数据缺失的情况可能是整个数据记录缺失，也可能是数据中某个字段信息的记录缺失。</p>
+<p><strong>规范性</strong>：是指记录是否符合规范，是否按照规定的格式存储（例如标准编码规则）。数据规范性审核是数据质量审核中比较重要也是比较复杂的一块。</p>
+<p><strong>一致性</strong>：是指数据是否符合逻辑，数据内单项或多项数据间存在逻辑关系。</p>
+<p><strong>准确性</strong>：准确性可能存在于个别记录，也可能存在于整个数据集上。准确性和规范性的差别在于规范性关注合规，表示统一，而准确性关注数据错误。</p>
+<p><strong>时效性</strong>：数据从产生到可以查看的时间间隔，也叫数据的延时时长。</p>
+<p><strong>唯一性</strong>：用于度量哪些数据是重复数据或者数据的哪些属性是重复的。即对存在于系统内或系统间的特定字段、记录或数据集意外重复的测量标准。</p>
 
-        <div class="pagination-container animated fadeIn">
-  
-  
-</div>
+        </div>
+
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://cnki-laoma.github.io/post/zhi-shi-qu-dong-yi-liao-cong-zhi-shi-ku-dao-zhi-shi-xi-tong/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  知识驱动医疗：从知识库到知识系统
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="https://cnki-laoma.github.io/post/yi-liao-de-ming-ming-shi-ti-xiao-jie/">
+                <h3 class="post-title">
+                  医疗的命名实体：小结
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '8c7eeee170372e7eb0b9',
+    clientSecret: '02f0d258e18d6b6770da622b23025bb48af5fc6a',
+    repo: 'Smart-Medicine',
+    owner: 'CNKI-LaoMa',
+    admin: ['CNKI-LaoMa'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
 
       </div>
     </div>
