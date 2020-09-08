@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cnki-laoma.github.io</id>
     <title>医药知识挖掘分析的设计思维</title>
-    <updated>2020-09-08T00:18:26.702Z</updated>
+    <updated>2020-09-08T06:20:59.246Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cnki-laoma.github.io"/>
     <link rel="self" href="https://cnki-laoma.github.io/atom.xml"/>
@@ -11,13 +11,6 @@
     <icon>https://cnki-laoma.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 医药知识挖掘分析的设计思维</rights>
     <entry>
-        <title type="html"><![CDATA[医学知识产品设计中的显与隐]]></title>
-        <id>https://cnki-laoma.github.io/post/yi-xue-zhi-shi-chan-pin-she-ji-zhong-de-xian-yu-yin/</id>
-        <link href="https://cnki-laoma.github.io/post/yi-xue-zhi-shi-chan-pin-she-ji-zhong-de-xian-yu-yin/">
-        </link>
-        <updated>2020-09-07T14:14:17.000Z</updated>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[知识驱动医疗：从知识库到知识系统]]></title>
         <id>https://cnki-laoma.github.io/post/zhi-shi-qu-dong-yi-liao-cong-zhi-shi-ku-dao-zhi-shi-xi-tong/</id>
         <link href="https://cnki-laoma.github.io/post/zhi-shi-qu-dong-yi-liao-cong-zhi-shi-ku-dao-zhi-shi-xi-tong/">
@@ -25,32 +18,39 @@
         <updated>2020-09-07T14:01:48.000Z</updated>
     </entry>
     <entry>
+        <title type="html"><![CDATA[医学知识产品设计中的显与隐]]></title>
+        <id>https://cnki-laoma.github.io/post/yi-xue-zhi-shi-chan-pin-she-ji-zhong-de-xian-yu-yin/</id>
+        <link href="https://cnki-laoma.github.io/post/yi-xue-zhi-shi-chan-pin-she-ji-zhong-de-xian-yu-yin/">
+        </link>
+        <updated>2020-08-31T14:14:17.000Z</updated>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[疾病知识数据集的质量要求]]></title>
         <id>https://cnki-laoma.github.io/post/ji-bing-zhi-shi-shu-ju-ji-de-zhi-liang-yao-qiu/</id>
         <link href="https://cnki-laoma.github.io/post/ji-bing-zhi-shi-shu-ju-ji-de-zhi-liang-yao-qiu/">
         </link>
-        <updated>2020-09-07T13:55:20.000Z</updated>
+        <updated>2020-08-24T13:55:20.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[医疗的命名实体：小结]]></title>
+        <title type="html"><![CDATA[医疗的命名实体：学习小结]]></title>
         <id>https://cnki-laoma.github.io/post/yi-liao-de-ming-ming-shi-ti-xiao-jie/</id>
         <link href="https://cnki-laoma.github.io/post/yi-liao-de-ming-ming-shi-ti-xiao-jie/">
         </link>
-        <updated>2020-09-07T13:40:04.000Z</updated>
+        <updated>2020-08-17T13:40:04.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[医学知识的复杂性及其表达]]></title>
         <id>https://cnki-laoma.github.io/post/yi-xue-zhi-shi-de-fu-za-xing-ji-qi-biao-da/</id>
         <link href="https://cnki-laoma.github.io/post/yi-xue-zhi-shi-de-fu-za-xing-ji-qi-biao-da/">
         </link>
-        <updated>2020-09-07T13:38:09.000Z</updated>
+        <updated>2020-08-10T13:38:09.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[医疗知识挖掘的上游思维]]></title>
-        <id>https://cnki-laoma.github.io/post/yi-liao-zhi-shi-wa-jue-de-shang-you-si-wei/</id>
-        <link href="https://cnki-laoma.github.io/post/yi-liao-zhi-shi-wa-jue-de-shang-you-si-wei/">
+        <title type="html"><![CDATA[医疗数字产品设计的一般原则：来自联合国路线图的启发]]></title>
+        <id>https://cnki-laoma.github.io/post/yi-liao-shu-zi-chan-pin-she-ji-de-yi-ban-yuan-ze-lai-zi-lian-he-guo-lu-xian-tu-de-qi-fa/</id>
+        <link href="https://cnki-laoma.github.io/post/yi-liao-shu-zi-chan-pin-she-ji-de-yi-ban-yuan-ze-lai-zi-lian-he-guo-lu-xian-tu-de-qi-fa/">
         </link>
-        <updated>2020-09-07T13:35:59.000Z</updated>
+        <updated>2020-07-13T05:50:18.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[为什么EPub不如PDF成功]]></title>
