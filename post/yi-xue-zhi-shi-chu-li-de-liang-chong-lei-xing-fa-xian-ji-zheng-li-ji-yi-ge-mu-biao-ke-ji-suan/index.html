@@ -33,14 +33,7 @@
             文章目录
           </p>
           <div class="toc-container hidden lg:block">
-            <ul class="markdownIt-TOC">
-<li><a href="#%E7%AE%80%E7%89%88">简版</a>
-<ul>
-<li><a href="#%E8%BE%83%E4%B8%BA%E5%AE%8C%E6%95%B4%E7%9A%84%E7%89%88%E6%9C%AC%E6%95%B4%E7%90%86%E5%A6%82%E4%B8%8B">较为完整的版本整理如下：</a></li>
-</ul>
-</li>
-</ul>
-
+            
           </div>
         </div>
       
@@ -85,87 +78,34 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">医疗的命名实体：学习小结</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">医学知识处理的两种类型（发现及整理）及一个目标（可计算）</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2020-08-17 by 马学海 / 5 min read
+          2020-09-14 by 马学海 / 3 min read
         </div>
         
         <div class="post-content yue">
-          <h1 id="简版">简版</h1>
-<p>参考：<a href="https://www.biendata.xyz/competition/ccks_2020_2_1/">CCKS2020：面向中文电子病历的医疗实体及事件抽取（一）医疗命名实体识别</a></p>
-<p>预定义类别（pre-defined categories）:</p>
-<p><strong>Disease</strong>：</p>
-<ul>
-<li><strong>疾病和诊断</strong>：医学上定义的疾病和医生在临床工作中对病因、病生理、分型分期等所作的判断。</li>
-</ul>
-<p><strong>Exam</strong>：</p>
-<ul>
-<li><strong>检查</strong>： 影像检查（X线、CT、MR、PETCT等）+造影+超声+心电图，未避免检查操作与手术操作过多冲突，不包含此外其它的诊断性操作，如胃镜、肠镜等。</li>
-<li><strong>检验</strong>： 在实验室进行的物理或化学检查，本期特指临床工作中检验科进行的化验，不含免疫组化等广义实验室检查</li>
-</ul>
-<p><strong>Treat</strong>：</p>
-<ul>
-<li><strong>手术</strong>： 医生在患者身体局部进行的切除、缝合等治疗，是外科的主要治疗方法。</li>
-<li><strong>药物</strong>： 用于疾病治疗的具体化学物质。</li>
-</ul>
-<p><strong>Body</strong>：</p>
-<ul>
-<li><strong>解剖部位</strong>： 指疾病、症状和体征发生的人体解剖学部位。</li>
-</ul>
-<p><strong>Symptom</strong>:</p>
-<ul>
-<li><strong>症状</strong>：病人自己向医生陈述（或是别人代述）的表现，如头疼、腹痛、鼻塞、恶心、呕吐等。</li>
-<li><strong>体征</strong>：医生给病人检查时发现的具有诊断意义的征候。</li>
-</ul>
-<hr>
-<h2 id="较为完整的版本整理如下">较为完整的版本整理如下：</h2>
-<p><strong>疾病</strong>：医学上定义的疾病，属于ICD-10分类中的一种。应提供疾病的中文名称、英文名称、英文简称。疾病的类型、状态等标注为该病的属性。</p>
-<p><strong>解剖部位</strong>：指疾病、症状和体征发生的人体解剖学部位（通常指由多种组织构成能行使功能的结构单位）。尽量使用MeSH医学主题词表来界定部位实体涵盖的范围。对应的类别有身体部位、感觉器官、组织、细胞、胚胎结构等概念。</p>
-<p><strong>症状</strong>：病人自己向医生陈述（或是别人代述）的表现，如头疼、腹痛、鼻塞、恶心、呕吐等。是由疾病导致的患者对机体生理功能异常的自身体验和感觉或者异常表现、显式表达的异常检查结果。</p>
-<p><strong>体征</strong>：医生给病人检查时发现的具有诊断意义的征候。</p>
-<p><strong>诊断</strong>：医生在临床工作中对病因、病生理、分型分期等所作的判断。</p>
-<p><strong>病因</strong>：即致病因素，是指作用于机体的众多因素中，能引起疾病并赋予该病特征的因素。</p>
-<p><strong>检查</strong>：通过技术设备证实患者具有某种疾病或出现某种症状而采取的检查手段、过程或者检查项目，为临床诊断、治疗提供依据。如影像检查（X线、CT、MR、PETCT等）、造影、超声、心电图，为避免检查操作与手术操作过多冲突，不包含其它的诊断性操作，如胃镜、肠镜等。可参考MeSH医学词表中编码为E的诊疗技术及设备类和《2018年医保诊疗目录》中的检查费和化验费类别来界定。</p>
-<p><strong>检验</strong>：在实验室进行的物理或化学检查，本期特指临床工作中检验科进行的化验，不含免疫组化等广义实验室检查。</p>
-<p><strong>手术</strong>：医生用医疗器械对病人身体进行的切除、缝合等治疗，以刀、剪、针等器械在人体局部进行的操作，来维持患者的健康，是外科的主要治疗方法。可使用ICD-9-CM和MeSH医学词表中编码为E的手术概念来界定范围。</p>
-<p><strong>药物</strong>：用于疾病治疗的具体化学物质。使用ATC、MeSH医学词表编码为D的药物来界定药物实体涵盖的范围。常见实体类型是类固醇、中药、化学药、生物药物、抗生素等。</p>
-<p><strong>其他治疗</strong>：指为了解决疾病或者缓解症状而施加给患者的治疗程序、干预措施等，不包含手术、药物的治疗方式。可使用ICD-9-CM-3来界定其他治疗涵盖的范围。</p>
-<p><strong>护理</strong>：配合疾病治疗，开展的常规护理和针对性护理。</p>
-<p><strong>预后</strong>：对患者的疾病过程、治疗效果、最终转归的一种估计。包含预后情况、预后生存率和预后生存时间。</p>
-<p><strong>流行病学</strong>：研究特定人群中疾病、健康状况的分布及其决定因素，并辅助于研究如何防治疾病及促进健康的，实体取值为字符串，范围较广。</p>
-<p><strong>社会学</strong>：是一种社会现象的实际情况和有关的现象发生的原因的机制，在这里特指与疾病发生有关的因素，主要包括病因、发病机制、高危因素、病理生理等。实体取值为字符串，范围较广。</p>
-<p><strong>其他</strong>：与疾病密切相关的其他信息，包括疾病的发病阶段、就诊科室、标准住院时间、出院标准、预防、注意事项等。</p>
+          <p>在上周五（2020.09.11）举办的“中国医院协会医院情报图书专业委员会学术年会”上，我做了题为《医学知识传播与应用的生态思维》的报告【<a href="https://k.cnki.net/CLectureLive/Index/9297">回放地址</a>】，用一张图粗略示意了知识流链条的各主要环节（工作主体）及其核心动作。</p>
+<figure data-type="image" tabindex="1"><img src="https://cnki-laoma.github.io/post-images/1600094068963.jpg" alt="" loading="lazy"></figure>
+<p>这里面涉及到一个细节，需要略作解释。我把知识的“发现”这件事留给了数据平台（图中左上），而不是知识集成处理平台（图中右下）。我的意思很明确，知识集成和处理平台虽然也做“挖掘”，但它的首要使命是在转换表达，是处理已有的知识（显性发表的），它和“发现”是不同类型的事情，它们涉及到的技术路径、质量评价标准都不一样。</p>
+<p>在医院的大数据平台上，医生和专家学者们可以借助数据分析工具开展研究，进行“知识”的发现，这属于eScience的范畴。由于医学的特殊性，任何新发现，未经反复验证是很难直接用于临床决策的。而要验证，就必然要进入学术出版流程，即要把这些发现整理发表（可以是文章或数据集），接受同行评议，成为原始研究文献。有了大量的原始研究，就可以做系统评价和Meta分析，这类产出有更高的证据级别，可以作为制定临床指南的基础。</p>
+<p>虽然道理上讲，随着技术的渗透，以及精准医疗的发展，绕过学术出版这一环节来确认新知，似乎也不是不可能。但目前基本没有可行性。实际上，在未来相当长的一段时间里，技术都不要指望能“颠覆”医疗行业的知识流（knowledge flow）生态，这是这个行业的复杂性所决定的。</p>
+<p>对于从事知识集成、挖掘和服务的机构而言，它们的首要任务，是面向应用需求，把已发表的（显性的）内容进行结构化、碎片化。这是一个把自然语言做形式化处理的过程。而对学术出版机构而言，其首要任务，是让受众(学者和读者)看到内容的“原貌”，即用自然语言的方式来整理知识。尽管有实力的大型学术出版机构可以有技术团队来做深入挖掘，但自然语言的形式是前提。</p>
+<p>医学讲究证据，医学知识的积累是个漫长的过程，需要在一个完整的生态系统里完成，人命关天，没有捷径。这就是为什么我们需要客观、冷静、务实地把这个过程梳理清楚，而不是一味迷信技术，忽略了人的干预（如学术出版）。</p>
+<p>知识挖掘的最终目标就是一个：让它们成为可计算的知识。这里的“可计算”是个广义的借用，指的是把知识变成可运行的代码，嵌入决策系统里，支撑决策。说白了，就是把知识变成工具，从而消除学习门槛，只需通过参数配置（简单交互），即可直接发挥作用。</p>
 
         </div>
 
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://cnki-laoma.github.io/tag/zmL0O5urM/">
-            <span class="flex-auto">体系标准</span>
-          </a>
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://cnki-laoma.github.io/tag/DfGsuI21p/">
-            <span class="flex-auto">知识表达</span>
-          </a>
         
 
 
         <div class="flex justify-between py-8">
           
-            <div class="prev-post">
-              <a href="https://cnki-laoma.github.io/post/ji-bing-zhi-shi-shu-ju-ji-de-zhi-liang-yao-qiu/">
-                <h3 class="post-title">
-                  <i class="ri-arrow-left-line"></i>
-                  疾病知识数据集的质量要求
-                </h3>
-              </a>
-            </div>
-          
 
           
             <div class="next-post">
-              <a href="https://cnki-laoma.github.io/post/yi-xue-zhi-shi-de-fu-za-xing-ji-qi-biao-da/">
+              <a href="https://cnki-laoma.github.io/post/zhi-shi-qu-dong-yi-liao-cong-zhi-shi-ku-dao-zhi-shi-xi-tong/">
                 <h3 class="post-title">
-                  医学知识的复杂性及其表达
+                  知识驱动医疗（1）：从知识库到知识系统
                   <i class="ri-arrow-right-line"></i>
                 </h3>
               </a>
