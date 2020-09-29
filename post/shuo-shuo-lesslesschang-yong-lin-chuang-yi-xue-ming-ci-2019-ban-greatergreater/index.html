@@ -1,0 +1,547 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>医药知识挖掘分析的设计思维</title>
+<meta name="description" content="Design Thinking for Knowledge-Driven Smart Medicine" />
+<link rel="shortcut icon" href="https://cnki-laoma.github.io/favicon.ico?v=1601355018934">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://cnki-laoma.github.io/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://cnki-laoma.github.io">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://cnki-laoma.github.io/images/avatar.png?v=1601355018934" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">医药知识挖掘分析的设计思维</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="https://cnki-laoma.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">说说《常用临床医学名词（2019版）》</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-09-29 by 马学海 / 5 min read
+        </div>
+        
+        <div class="post-content yue">
+          <hr>
+<p>今年（2020年）1月9日，医政医管局官网上发布了<a href="http://www.nhc.gov.cn/yzygj/s7659/202001/5fdbd7a74c9d4ca1a4c1382a00cd5d27.shtml?from=singlemessage">“国家卫生健康委关于印发常用临床医学名词（2019年版）的通知”</a>（国卫医函〔2019〕301号），正式贴出了国家卫健委2019年12月29日发布的《常用临床医学名词（2019年版）》。纸质版由人民卫生出版社出版。</p>
+<p>这个发布引起兴趣，主要是“临床”这两个字。</p>
+<p>说起“临床”相关名词术语标准，我们马上会想到两个东西，一个是ICD-10，一个是SNOMED CT。SNOMED CT在临床决策方面有诸多应用方式，比较复杂，咱们以后专门研讨。世卫组织的ICD系列已有百年历史，它的初衷是为了疾病统计的需要，并不是为了临床工作，所以并没有太多考虑临床医生的实际工作习惯和需求，有些疾病分得不够细，用语也未必专业。</p>
+<p>此次国内推出这套名词，我的理解，就是针对国内情况，突破ICD的局限，用一套术语来同时兼顾统计、收费、临床、管理等工作。通知里的原话是：为统一我国的临床医学名词，实现医疗服务规范化标准化管理，全面推进病案首页书写规范、疾病分类与代码、手术操作分类与代码、医学名词术语“四统一”工作，我委组织制定了《常用临床医学名词（2019年版）》。</p>
+<p>据材料介绍，此工作在2015年启动，由北京市卫生信息中心牵头，中华医学会名词审定办公室、中国医学科学院协和医院及北大医学院附属第一、二、三医院参与，国务院参事、国家卫生健康委医政医管局DRG质控中心主任邓小虹参事任组长。其基于两大工作基础，一是北京市2015年出版的《疾病诊断与手术操作名词术语》，二是中华医学会成立的医学名词审定工作委员会（全国科学技术名词审定委员会授权）发布的一系列审定名词。</p>
+<p>作为“临床医学”名词，公共卫生和基础医学没包括在内，只涉及临床医学的疾病诊断、症状体征、手术操作和临床检查4类词汇。临床的另一个重要分支，即药品耗材，因是由药监局制定，也没包括在其中。</p>
+<p>官网上提供的可下载PDF文件实际是高清图片，大小接近1.2G，很不方便操作。如果想要电子表格文件，可能需要联系项目组，也不方便。幸好，配套的有在线平台，可以注册登录学习：</p>
+<ul>
+<li><a href="http://yixuemingci.yadingdata.com/">常用临床医学名词维护平台 - http://yixuemingci.yadingdata.com/</a></li>
+</ul>
+<p>名词按30个临床专业划分大类，共计42000多个。同一专业下，按疾病诊断、症状体征、手术操作和临床检查四个语义类型归集，每个概念包括中文正名、英文名、中文又称和曾称。</p>
+<p>我将各专业的名词数量统计了一张表，如下。</p>
+<p><strong>表1</strong> <strong>常用临床医学名词（2019年版）分类统计</strong></p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>临床专业</th>
+<th>疾病诊断<br>名词</th>
+<th>症状体征<br>名词</th>
+<th>手术操作<br>名词</th>
+<th>临床检查<br>名词</th>
+<th><strong>合计</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td><strong>眼科</strong></td>
+<td>1955</td>
+<td>72</td>
+<td>249</td>
+<td>74</td>
+<td><strong>2350</strong></td>
+</tr>
+<tr>
+<td>02</td>
+<td><strong>耳鼻喉科</strong></td>
+<td>937</td>
+<td>139</td>
+<td>554</td>
+<td>92</td>
+<td><strong>1722</strong></td>
+</tr>
+<tr>
+<td>03</td>
+<td><strong>口腔科</strong></td>
+<td>1660</td>
+<td>17</td>
+<td>508</td>
+<td>118</td>
+<td><strong>2303</strong></td>
+</tr>
+<tr>
+<td>04</td>
+<td><strong>急诊科</strong></td>
+<td>129</td>
+<td>-</td>
+<td>8</td>
+<td>3</td>
+<td><strong>140</strong></td>
+</tr>
+<tr>
+<td>05</td>
+<td><strong>心内科</strong></td>
+<td>692</td>
+<td>103</td>
+<td>74</td>
+<td>41</td>
+<td><strong>910</strong></td>
+</tr>
+<tr>
+<td>06</td>
+<td><strong>呼吸内科</strong></td>
+<td>1004</td>
+<td>134</td>
+<td>279</td>
+<td>491</td>
+<td><strong>1908</strong></td>
+</tr>
+<tr>
+<td>07</td>
+<td><strong>消化内科</strong></td>
+<td>1681</td>
+<td>36</td>
+<td>106</td>
+<td>10</td>
+<td><strong>1833</strong></td>
+</tr>
+<tr>
+<td>08</td>
+<td><strong>神经内科</strong></td>
+<td>1783</td>
+<td>2</td>
+<td>2</td>
+<td>496</td>
+<td><strong>2283</strong></td>
+</tr>
+<tr>
+<td>09</td>
+<td><strong>肾内科</strong></td>
+<td>433</td>
+<td>15</td>
+<td>55</td>
+<td>48</td>
+<td><strong>551</strong></td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>内分泌科</strong></td>
+<td>1353</td>
+<td>19</td>
+<td>-</td>
+<td>268</td>
+<td><strong>1640</strong></td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>血液科</strong></td>
+<td>418</td>
+<td>11</td>
+<td>76</td>
+<td>20</td>
+<td><strong>525</strong></td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>普外科</strong></td>
+<td>212</td>
+<td>6</td>
+<td>921</td>
+<td>53</td>
+<td><strong>1192</strong></td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>神经外科</strong></td>
+<td>666</td>
+<td>3</td>
+<td>608</td>
+<td>7</td>
+<td><strong>1284</strong></td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>胸外科</strong></td>
+<td>79</td>
+<td>56</td>
+<td>376</td>
+<td>33</td>
+<td><strong>544</strong></td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>心血管外科</strong></td>
+<td>1134</td>
+<td>-</td>
+<td>342</td>
+<td>37</td>
+<td><strong>1513</strong></td>
+</tr>
+<tr>
+<td>16</td>
+<td><strong>泌尿外科</strong></td>
+<td>767</td>
+<td>10</td>
+<td>764</td>
+<td>23</td>
+<td><strong>1564</strong></td>
+</tr>
+<tr>
+<td>17</td>
+<td><strong>骨科</strong></td>
+<td>4754</td>
+<td>235</td>
+<td>1610</td>
+<td>73</td>
+<td><strong>6672</strong></td>
+</tr>
+<tr>
+<td>18</td>
+<td><strong>整形外科</strong></td>
+<td>253</td>
+<td>-</td>
+<td>380</td>
+<td>-</td>
+<td><strong>633</strong></td>
+</tr>
+<tr>
+<td>19</td>
+<td><strong>烧伤科</strong></td>
+<td>518</td>
+<td>18</td>
+<td>297</td>
+<td>21</td>
+<td><strong>854</strong></td>
+</tr>
+<tr>
+<td>20</td>
+<td><strong>小儿外科</strong></td>
+<td>-</td>
+<td>-</td>
+<td>124</td>
+<td>-</td>
+<td><strong>124</strong></td>
+</tr>
+<tr>
+<td>21</td>
+<td><strong>肿瘤科</strong></td>
+<td>355</td>
+<td>-</td>
+<td>989</td>
+<td>118</td>
+<td><strong>1462</strong></td>
+</tr>
+<tr>
+<td>22</td>
+<td><strong>放射治疗科</strong></td>
+<td>63</td>
+<td>-</td>
+<td>311</td>
+<td>-</td>
+<td><strong>374</strong></td>
+</tr>
+<tr>
+<td>23</td>
+<td><strong>妇科</strong></td>
+<td>885</td>
+<td>12</td>
+<td>630</td>
+<td>15</td>
+<td><strong>1542</strong></td>
+</tr>
+<tr>
+<td>24</td>
+<td><strong>产科</strong></td>
+<td>1068</td>
+<td>9</td>
+<td>120</td>
+<td>21</td>
+<td><strong>1218</strong></td>
+</tr>
+<tr>
+<td>25</td>
+<td><strong>新生儿科</strong></td>
+<td>1155</td>
+<td>28</td>
+<td>32</td>
+<td>16</td>
+<td><strong>1231</strong></td>
+</tr>
+<tr>
+<td>26</td>
+<td><strong>皮肤科</strong></td>
+<td>2660</td>
+<td>24</td>
+<td>209</td>
+<td>36</td>
+<td><strong>2929</strong></td>
+</tr>
+<tr>
+<td>27</td>
+<td><strong>精神科</strong></td>
+<td>606</td>
+<td>289</td>
+<td>32</td>
+<td>117</td>
+<td><strong>1044</strong></td>
+</tr>
+<tr>
+<td>28</td>
+<td><strong>康复科</strong></td>
+<td>364</td>
+<td>6</td>
+<td>50</td>
+<td>19</td>
+<td><strong>439</strong></td>
+</tr>
+<tr>
+<td>29</td>
+<td><strong>职业病与中毒科</strong></td>
+<td>579</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>579</strong></td>
+</tr>
+<tr>
+<td>30</td>
+<td><strong>感染科</strong></td>
+<td>1085</td>
+<td>18</td>
+<td>-</td>
+<td>-</td>
+<td><strong>1103</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>合计：</strong></td>
+<td><strong>29248</strong></td>
+<td><strong>1262</strong></td>
+<td><strong>9706</strong></td>
+<td><strong>2250</strong></td>
+<td><strong>42466</strong></td>
+</tr>
+</tbody>
+</table>
+<p>由于不同专业之间名词存在交叉，若按实际语义类型进行统计，应该是：疾病诊断名词26806个，症状体征名词1160个，手术操作名词8271个，临床检查名词2224个，共计38461个。</p>
+
+        </div>
+
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://cnki-laoma.github.io/post/yi-xue-zhi-shi-chu-li-de-liang-chong-lei-xing-fa-xian-ji-zheng-li-ji-yi-ge-mu-biao-ke-ji-suan/">
+                <h3 class="post-title">
+                  医学知识的几个关键词：发现，整理，可计算，生态
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '8c7eeee170372e7eb0b9',
+    clientSecret: '02f0d258e18d6b6770da622b23025bb48af5fc6a',
+    repo: 'Smart-Medicine',
+    owner: 'CNKI-LaoMa',
+    admin: ['CNKI-LaoMa'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="https://cnki-laoma.github.io/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>
