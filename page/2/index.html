@@ -16,7 +16,7 @@
 
   </head>
   <body>
-    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+    <div class="main px-4 flex flex-col lg:flex-row">
       <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
   <div class="lg:sticky top-0">
     <div class="sidebar-content">
@@ -30,9 +30,41 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            文章目录
+            Design Thinking for Knowledge-Driven Smart Medicine
           </p>
-          <div class="toc-container hidden lg:block">
+          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
+            
+              
+                <a href="https://github.com/CNKI-LaoMa" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
+                  <i class="ri-github-line"></i>
+                </a>
+              
+            
+              
+            
+              
+                <a href="https://weibo.com/bookscent/" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
+                  <i class="ri-weibo-line"></i>
+                </a>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                <a href="839366005" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
+                  <i class="ri-qq-line"></i>
+                </a>
+              
             
           </div>
         </div>
@@ -77,87 +109,37 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">医学知识产品设计中的显与隐</h1>
-        <div class="text-sm text-gray-700 lg:my-8">
-          2020-08-31 by 马学海 / 1 min read
-        </div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
+        <h2 class="latest-article text-lg text-gray-700 mb-8">
+          <i class="ri-article-line"></i>
+          最新文章
+        </h2>
         
-        <div class="post-content yue">
-          <p><strong>一显一隐：黑盒与白盒</strong></p>
-<ol>
-<li>显：产品价值的显化（show, sign）。基于场景化思维，通过服务设计实现。</li>
-<li>隐：使用体验上的简化（compact，precise）。基于结构化思维，通过算法设计实现。</li>
-</ol>
-<p><strong>隐藏的要义</strong>：</p>
-<ul>
-<li>隐的前提是：需要，但不常用，若显化则会成为阻碍，给体验减分。</li>
-<li>要点：隐藏不是删除。</li>
-<li>原则：容易找到。很难找到的“隐”，等于删除。</li>
-<li>把底层逻辑隐掉：产品要关注用户的心理期望，而不是底层逻辑。用户就想知其然，不要给他所以然。</li>
-</ul>
-
-        </div>
-
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="https://cnki-laoma.github.io/post/springerbooks/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">【资源】医药类免费图书：Springer出版，33种</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://cnki-laoma.github.io/tag/HQa7CzG4f/">
-            <span class="flex-auto">产品设计</span>
-          </a>
-        
+      </div>
+      <div class="text-gray-400 text-sm font-light">2020-05-03 by 马学海 / 4 min read</div>
+    </div>
+  </section>
 
-
-        <div class="flex justify-between py-8">
-          
-            <div class="prev-post">
-              <a href="https://cnki-laoma.github.io/post/zhi-shi-qu-dong-yi-liao-cong-zhi-shi-ku-dao-zhi-shi-xi-tong/">
-                <h3 class="post-title">
-                  <i class="ri-arrow-left-line"></i>
-                  知识驱动医疗（1）：从知识库到知识系统
-                </h3>
-              </a>
-            </div>
-          
-
-          
-            <div class="next-post">
-              <a href="https://cnki-laoma.github.io/post/ji-bing-zhi-shi-shu-ju-ji-de-zhi-liang-yao-qiu/">
-                <h3 class="post-title">
-                  疾病知识数据集的质量要求
-                  <i class="ri-arrow-right-line"></i>
-                </h3>
-              </a>
-            </div>
+        <div class="read-more">
           
         </div>
+        <div class="index-page">
+          <div class="pagination-container animated fadeIn">
+  
+    <a href="https://cnki-laoma.github.io/" class="page-btn"><i class="ri-arrow-left-line"></i> 上一页</a>
+  
+  
+</div>
 
-        
-          
-            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-
-<script>
-
-  var gitalk = new Gitalk({
-    clientID: '8c7eeee170372e7eb0b9',
-    clientSecret: '02f0d258e18d6b6770da622b23025bb48af5fc6a',
-    repo: 'Smart-Medicine',
-    owner: 'CNKI-LaoMa',
-    admin: ['CNKI-LaoMa'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-
-  gitalk.render('gitalk-container')
-
-</script>
-
-          
-
-          
-        
-
+        </div>
       </div>
     </div>
 

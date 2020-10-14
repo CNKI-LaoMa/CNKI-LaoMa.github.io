@@ -1,0 +1,1392 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>医药知识挖掘分析的设计思维</title>
+<meta name="description" content="Design Thinking for Knowledge-Driven Smart Medicine" />
+<link rel="shortcut icon" href="https://cnki-laoma.github.io/favicon.ico?v=1602693393109">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://cnki-laoma.github.io/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://cnki-laoma.github.io">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://cnki-laoma.github.io/images/avatar.png?v=1602693393109" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">医药知识挖掘分析的设计思维</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="https://cnki-laoma.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">国内医疗行业的信息化标准（写在第51个世界标准日）</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-10-15 by 马学海 / 25 min read
+        </div>
+        
+        <div class="post-content yue">
+          <br>
+<p>今年（2020年）10月14日是第51个世界标准日（<a href="https://www.iso.org/world-standards-day.html">World Standards Day</a>），主题为“标准保护地球”（Protecting the planet with standards）。</p>
+<p>对医疗信息化行业而言，“标准”的重要性不言而喻。我们针对临床业务场景开发的任何知识库和决策支持类产品，都必须要能够和医院的信息系统对接，如果没有高质量的、统一的标准，不同系统之间的互操作就无从谈起。</p>
+<p>就在几天前，10月10日，卫健委规划发展与信息化司新发布了一个<a href="http://www.nhc.gov.cn/guihuaxxs/gongwen12/202010/4114443b613546148b275f191da4662b.shtml">“关于加强全民健康信息标准化体系建设的意见”</a>（以下简称《意见》），确定了三项重点任务：一是促进全民健康信息基础设施标准化建设，二是加强全民健康信息数据库标准化建设，三是推进新兴信息技术应用标准化建设。作为基础的第一项任务共6条，第二条“强化全国医院信息平台标准化建设”中特别提到：<strong>加快研究编制医学术语、检查检验代码、药品耗材应用编码、数据交互接口、数据分析、临床决策支持等基础标准。</strong></p>
+<p>有点遗憾的是，《意见》里没有关于与国际标准对接的讲述。唯一提到“国际”字眼的地方，是“统筹中医药信息标准化建设”这一段，原文是：“积极参与国际标准化组织的工作，开展中医药名词术语与信息学领域国际标准制定。” 就在《意见》发布的次日（10月11日），《人民日报》要闻版发表了名为<a href="http://paper.people.com.cn/rmrb/html/2020-10/11/nw.D110000renmrb_20201011_1-03.htm">《中医药快步融入国际医药体系》</a>的文章，末尾写道：由中国推动在国际标准化组织（ISO）成立的中医药技术委员会已发布数十项中医药国际标准。</p>
+<p>这些年国内出台的医疗信息化相关标准已有很多，超过了200项（附表），但存在的问题也是显而易见，有标准本身的，也用应用和管理层面的。总体看，标准的支撑作用并没有充分发挥。希望这一波的推动能让工作迈入正规。</p>
+<br>
+<p><strong>附表：现行有效的卫生健康行业信息化标准目录（截至2020年8月，共227项）</strong> （引自卫健委官网）</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>标准名称</th>
+<th>标准号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>疾病分类与代码</td>
+<td>GB/T 14396-2016</td>
+</tr>
+<tr>
+<td>2</td>
+<td>全国卫生行业医疗器械、仪器设备（商品、物资）分类与代码</td>
+<td>WS/T 118-1999</td>
+</tr>
+<tr>
+<td>3</td>
+<td>卫生信息数据元标准化规则</td>
+<td>WS/T 303-2009</td>
+</tr>
+<tr>
+<td>4</td>
+<td>卫生信息数据模式描述指南</td>
+<td>WS/T 304-2009</td>
+</tr>
+<tr>
+<td>5</td>
+<td>卫生信息数据集元数据规范</td>
+<td>WS/T 305-2009</td>
+</tr>
+<tr>
+<td>6</td>
+<td>卫生信息数据集分类与编码规则</td>
+<td>WS/T 306-2009</td>
+</tr>
+<tr>
+<td>7</td>
+<td>卫生信息数据元目录　第1部分：总则</td>
+<td>WS 363.1-2011</td>
+</tr>
+<tr>
+<td>8</td>
+<td>卫生信息数据元目录　第2部分：标识</td>
+<td>WS 363.2-2011</td>
+</tr>
+<tr>
+<td>9</td>
+<td>卫生信息数据元目录　第3部分：人口学及社会经济学特征</td>
+<td>WS 363.3-2011</td>
+</tr>
+<tr>
+<td>10</td>
+<td>卫生信息数据元目录　第4部分：健康史</td>
+<td>WS 363.4-2011</td>
+</tr>
+<tr>
+<td>11</td>
+<td>卫生信息数据元目录　第5部分：健康危险因素</td>
+<td>WS 363.5-2011</td>
+</tr>
+<tr>
+<td>12</td>
+<td>卫生信息数据元目录　第6部分：主诉与症状</td>
+<td>WS 363.6-2011</td>
+</tr>
+<tr>
+<td>13</td>
+<td>卫生信息数据元目录　第7部分：体格检查</td>
+<td>WS 363.7-2011</td>
+</tr>
+<tr>
+<td>14</td>
+<td>卫生信息数据元目录　第8部分：临床辅助检查</td>
+<td>WS 363.8-2011</td>
+</tr>
+<tr>
+<td>15</td>
+<td>卫生信息数据元目录　第9部分：实验室检查</td>
+<td>WS 363.9-2011</td>
+</tr>
+<tr>
+<td>16</td>
+<td>卫生信息数据元目录　第10部分：医学诊断</td>
+<td>WS 363.10-2011</td>
+</tr>
+<tr>
+<td>17</td>
+<td>卫生信息数据元目录　第11部分：医学评估</td>
+<td>WS 363.11-2011</td>
+</tr>
+<tr>
+<td>18</td>
+<td>卫生信息数据元目录　第12部分：计划与干预</td>
+<td>WS 363.12-2011</td>
+</tr>
+<tr>
+<td>19</td>
+<td>卫生信息数据元目录　第13部分：卫生费用</td>
+<td>WS 363.13-2011</td>
+</tr>
+<tr>
+<td>20</td>
+<td>卫生信息数据元目录　第14部分：卫生机构</td>
+<td>WS 363.14-2011</td>
+</tr>
+<tr>
+<td>21</td>
+<td>卫生信息数据元目录　第15部分：卫生人员</td>
+<td>WS 363.15-2011</td>
+</tr>
+<tr>
+<td>22</td>
+<td>卫生信息数据元目录　第16部分：药品、设备与材料</td>
+<td>WS 363.16-2011</td>
+</tr>
+<tr>
+<td>23</td>
+<td>卫生信息数据元目录　第17部分：卫生管理</td>
+<td>WS 363.17-2011</td>
+</tr>
+<tr>
+<td>24</td>
+<td>卫生信息数据元值域代码　第1部分：总则</td>
+<td>WS 364.1-2011</td>
+</tr>
+<tr>
+<td>25</td>
+<td>卫生信息数据元值域代码　第2部分：标识</td>
+<td>WS 364.2-2011</td>
+</tr>
+<tr>
+<td>26</td>
+<td>卫生信息数据元值域代码　第3部分：人口学及社会经济学特征</td>
+<td>WS 364.3-2011</td>
+</tr>
+<tr>
+<td>27</td>
+<td>卫生信息数据元值域代码　第4部分：健康史</td>
+<td>WS 364.4-2011</td>
+</tr>
+<tr>
+<td>28</td>
+<td>卫生信息数据元值域代码　第5部分：健康危险因素</td>
+<td>WS 364.5-2011</td>
+</tr>
+<tr>
+<td>29</td>
+<td>卫生信息数据元值域代码　第6部分：主诉与症状</td>
+<td>WS 364.6-2011</td>
+</tr>
+<tr>
+<td>30</td>
+<td>卫生信息数据元值域代码　第7部分：体格检查</td>
+<td>WS 364.7-2011</td>
+</tr>
+<tr>
+<td>31</td>
+<td>卫生信息数据元值域代码　第8部分：临床辅助检查</td>
+<td>WS 364.8-2011</td>
+</tr>
+<tr>
+<td>32</td>
+<td>卫生信息数据元值域代码　第9部分：实验室检查</td>
+<td>WS 364.9-2011</td>
+</tr>
+<tr>
+<td>33</td>
+<td>卫生信息数据元值域代码　第10部分：医学诊断</td>
+<td>WS 364.10-2011</td>
+</tr>
+<tr>
+<td>34</td>
+<td>卫生信息数据元值域代码　第11部分：医学评估</td>
+<td>WS 364.11-2011</td>
+</tr>
+<tr>
+<td>35</td>
+<td>卫生信息数据元值域代码　第12部分：计划与干预</td>
+<td>WS 364.12-2011</td>
+</tr>
+<tr>
+<td>36</td>
+<td>卫生信息数据元值域代码　第13部分：卫生费用</td>
+<td>WS 364.13-2011</td>
+</tr>
+<tr>
+<td>37</td>
+<td>卫生信息数据元值域代码　第14部分：卫生机构</td>
+<td>WS 364.14-2011</td>
+</tr>
+<tr>
+<td>38</td>
+<td>卫生信息数据元值域代码　第15部分：卫生人员</td>
+<td>WS 364.15-2011</td>
+</tr>
+<tr>
+<td>39</td>
+<td>卫生信息数据元值域代码　第16部分：药品、设备与材料</td>
+<td>WS 364.16-2011</td>
+</tr>
+<tr>
+<td>40</td>
+<td>卫生信息数据元值域代码　第17部分：卫生管理</td>
+<td>WS 364.17-2011</td>
+</tr>
+<tr>
+<td>41</td>
+<td>卫生信息基本数据集编制规范</td>
+<td>WS 370-2012</td>
+</tr>
+<tr>
+<td>42</td>
+<td>城乡居民健康档案基本数据集</td>
+<td>WS 365-2011</td>
+</tr>
+<tr>
+<td>43</td>
+<td>基本信息基本数据集个人信息</td>
+<td>WS 371-2012</td>
+</tr>
+<tr>
+<td>44</td>
+<td>疾病管理基本数据集　第1部分：乙肝患者管理</td>
+<td>WS 372.1-2012</td>
+</tr>
+<tr>
+<td>45</td>
+<td>疾病管理基本数据集　第2部分：高血压患者健康管理</td>
+<td>WS 372.2-2012</td>
+</tr>
+<tr>
+<td>46</td>
+<td>疾病管理基本数据集　第3部分：重性精神疾病患者管理</td>
+<td>WS 372.3-2012</td>
+</tr>
+<tr>
+<td>47</td>
+<td>疾病管理基本数据集　第4部分：老年人健康管理</td>
+<td>WS 372.4-2012</td>
+</tr>
+<tr>
+<td>48</td>
+<td>疾病管理基本数据集　第5部分：2型糖尿病病例管理</td>
+<td>WS 372.5-2012</td>
+</tr>
+<tr>
+<td>49</td>
+<td>疾病管理基本数据集　第6部分：肿瘤病例</td>
+<td>WS 372.6-2012</td>
+</tr>
+<tr>
+<td>50</td>
+<td>医疗服务基本数据集　第1部分：门诊摘要</td>
+<td>WS 373.1-2012</td>
+</tr>
+<tr>
+<td>51</td>
+<td>医疗服务基本数据集　第2部分：住院摘要</td>
+<td>WS 373.2-2012</td>
+</tr>
+<tr>
+<td>52</td>
+<td>医疗服务基本数据集　第3部分：成人健康体检</td>
+<td>WS 373.3-2012</td>
+</tr>
+<tr>
+<td>53</td>
+<td>卫生管理基本数据集　第1部分：卫生监督检查与行政处罚</td>
+<td>WS 374.1-2012</td>
+</tr>
+<tr>
+<td>54</td>
+<td>卫生管理基本数据集　第2部分：卫生监督行政许可与登记</td>
+<td>WS 374.2-2012</td>
+</tr>
+<tr>
+<td>55</td>
+<td>卫生管理基本数据集　第3部分：卫生监督监测与评价</td>
+<td>WS 374.3-2012</td>
+</tr>
+<tr>
+<td>56</td>
+<td>卫生管理基本数据集　第4部分：卫生监督机构与人员</td>
+<td>WS 374.4-2012</td>
+</tr>
+<tr>
+<td>57</td>
+<td>疾病控制基本数据集　第1部分：艾滋病综合防治</td>
+<td>WS 375.1-2012</td>
+</tr>
+<tr>
+<td>58</td>
+<td>疾病控制基本数据集　第2部分：血吸虫病病人管理</td>
+<td>WS 375.2-2012</td>
+</tr>
+<tr>
+<td>59</td>
+<td>疾病控制基本数据集　第3部分：慢性丝虫病病人管理</td>
+<td>WS 375.3-2012</td>
+</tr>
+<tr>
+<td>60</td>
+<td>疾病控制基本数据集　第4部分：职业病报告</td>
+<td>WS 375.4-2012</td>
+</tr>
+<tr>
+<td>61</td>
+<td>疾病控制基本数据集　第5部分：职业性健康监护</td>
+<td>WS 375.5-2012</td>
+</tr>
+<tr>
+<td>62</td>
+<td>疾病控制基本数据集　第6部分：伤害监测报告</td>
+<td>WS 375.6-2012</td>
+</tr>
+<tr>
+<td>63</td>
+<td>疾病控制基本数据集　第7部分：农药中毒报告</td>
+<td>WS 375.7-2012</td>
+</tr>
+<tr>
+<td>64</td>
+<td>疾病控制基本数据集　第8部分：行为危险因素监测</td>
+<td>WS 375.8-2012</td>
+</tr>
+<tr>
+<td>65</td>
+<td>疾病控制基本数据集　第9部分：死亡医学证明</td>
+<td>WS 375.9-2012</td>
+</tr>
+<tr>
+<td>66</td>
+<td>疾病控制基本数据集　第10部分：传染病报告</td>
+<td>WS 375.10-2012</td>
+</tr>
+<tr>
+<td>67</td>
+<td>疾病控制基本数据集　第11部分：结核病报告</td>
+<td>WS 375.11-2012</td>
+</tr>
+<tr>
+<td>68</td>
+<td>疾病控制基本数据集　第12部分：预防接种</td>
+<td>WS 375.12-2012</td>
+</tr>
+<tr>
+<td>69</td>
+<td>疾病控制基本数据集　第13部分：职业病危害因素监测</td>
+<td>WS 375.13-2017</td>
+</tr>
+<tr>
+<td>70</td>
+<td>疾病控制基本数据集　第14部分：学校缺勤缺课监测报告</td>
+<td>WS 375.14-2016</td>
+</tr>
+<tr>
+<td>71</td>
+<td>疾病控制基本数据集　第15部分：托幼机构缺勤监测报告</td>
+<td>WS 375.15-2016</td>
+</tr>
+<tr>
+<td>72</td>
+<td>疾病控制基本数据集　第18部分：疑似预防接种异常反应报告</td>
+<td>WS 375.18-2016</td>
+</tr>
+<tr>
+<td>73</td>
+<td>疾病控制基本数据集　第19部分：疫苗管理</td>
+<td>WS 375.19-2016</td>
+</tr>
+<tr>
+<td>74</td>
+<td>疾病控制基本数据集　第20部分：脑卒中登记报告</td>
+<td>WS 375.20-2016</td>
+</tr>
+<tr>
+<td>75</td>
+<td>疾病控制基本数据集　第21部分：脑卒中病人管理</td>
+<td>WS 375.21-2016</td>
+</tr>
+<tr>
+<td>76</td>
+<td>疾病控制基本数据集　第22部分：宫颈癌筛查登记</td>
+<td>WS 375.22-2016</td>
+</tr>
+<tr>
+<td>77</td>
+<td>疾病控制基本数据集　第23部分：大肠癌筛查登记</td>
+<td>WS 375.23-2016</td>
+</tr>
+<tr>
+<td>78</td>
+<td>儿童保健基本数据集　第1部分：出生医学证明</td>
+<td>WS 376.1-2013</td>
+</tr>
+<tr>
+<td>79</td>
+<td>儿童保健基本数据集　第2部分：儿童健康体检</td>
+<td>WS 376.2-2013</td>
+</tr>
+<tr>
+<td>80</td>
+<td>儿童保健基本数据集　第3部分：新生儿疾病筛查</td>
+<td>WS 376.3-2013</td>
+</tr>
+<tr>
+<td>81</td>
+<td>儿童保健基本数据集　第4部分：营养性疾病儿童管理</td>
+<td>WS 376.4-2013</td>
+</tr>
+<tr>
+<td>82</td>
+<td>儿童保健基本数据集　第5部分：5岁以下儿童死亡报告</td>
+<td>WS 376.5-2013</td>
+</tr>
+<tr>
+<td>83</td>
+<td>妇女保健基本数据集　第1部分：婚前保健服务</td>
+<td>WS 377.1-2013</td>
+</tr>
+<tr>
+<td>84</td>
+<td>妇女保健基本数据集　第2部分：妇女常见病筛查</td>
+<td>WS 377.2-2013</td>
+</tr>
+<tr>
+<td>85</td>
+<td>妇女保健基本数据集　第3部分：计划生育技术服务</td>
+<td>WS 377.3-2013</td>
+</tr>
+<tr>
+<td>86</td>
+<td>妇女保健基本数据集　第4部分：孕产期保健服务与高危管理</td>
+<td>WS 377.4-2013</td>
+</tr>
+<tr>
+<td>87</td>
+<td>妇女保健基本数据集　第5部分：产前筛查与诊断</td>
+<td>WS 377.5-2013</td>
+</tr>
+<tr>
+<td>88</td>
+<td>妇女保健基本数据集　第6部分：出生缺陷监测</td>
+<td>WS 377.6-2013</td>
+</tr>
+<tr>
+<td>89</td>
+<td>妇女保健基本数据集　第7部分：孕产妇死亡报告</td>
+<td>WS 377.7-2013</td>
+</tr>
+<tr>
+<td>90</td>
+<td>电子病历基本数据集　第1部分：病历概要</td>
+<td>WS 445.1-2014</td>
+</tr>
+<tr>
+<td>91</td>
+<td>电子病历基本数据集　第2部分：门(急)诊病历</td>
+<td>WS 445.2-2014</td>
+</tr>
+<tr>
+<td>92</td>
+<td>电子病历基本数据集　第3部分：门(急)诊处方</td>
+<td>WS 445.3-2014</td>
+</tr>
+<tr>
+<td>93</td>
+<td>电子病历基本数据集　第4部分：检查检验记录</td>
+<td>WS 445.4-2014</td>
+</tr>
+<tr>
+<td>94</td>
+<td>电子病历基本数据集　第5部分：治疗处置—一般治疗处置记录</td>
+<td>WS 445.5-2014</td>
+</tr>
+<tr>
+<td>95</td>
+<td>电子病历基本数据集　第6部分：治疗处置—助产记录</td>
+<td>WS 445.6-2014</td>
+</tr>
+<tr>
+<td>96</td>
+<td>电子病历基本数据集　第7部分：护理—护理操作记录</td>
+<td>WS 445.7-2014</td>
+</tr>
+<tr>
+<td>97</td>
+<td>电子病历基本数据集　第8部分：护理—护理评估与计划</td>
+<td>WS 445.8-2014</td>
+</tr>
+<tr>
+<td>98</td>
+<td>电子病历基本数据集　第9部分：知情告知信息</td>
+<td>WS 445.9-2014</td>
+</tr>
+<tr>
+<td>99</td>
+<td>电子病历基本数据集　第10部分：住院病案首页</td>
+<td>WS 445.10-2014</td>
+</tr>
+<tr>
+<td>100</td>
+<td>电子病历基本数据集　第11部分：中医住院病案首页</td>
+<td>WS 445.11-2014</td>
+</tr>
+<tr>
+<td>101</td>
+<td>电子病历基本数据集　第12部分：入院记录</td>
+<td>WS 445.12-2014</td>
+</tr>
+<tr>
+<td>102</td>
+<td>电子病历基本数据集　第13部分：住院病程记录</td>
+<td>WS 445.13-2014</td>
+</tr>
+<tr>
+<td>103</td>
+<td>电子病历基本数据集　第14部分：住院医嘱</td>
+<td>WS 445.14-2014</td>
+</tr>
+<tr>
+<td>104</td>
+<td>电子病历基本数据集　第15部分：出院小结</td>
+<td>WS 445.15-2014</td>
+</tr>
+<tr>
+<td>105</td>
+<td>电子病历基本数据集　第16部分：转诊(院)记录</td>
+<td>WS 445.16-2014</td>
+</tr>
+<tr>
+<td>106</td>
+<td>电子病历基本数据集　第17部分：医疗机构信息</td>
+<td>WS 445.17-2014</td>
+</tr>
+<tr>
+<td>107</td>
+<td>基于健康档案的区域卫生信息平台技术规范</td>
+<td>WS/T 446-2014</td>
+</tr>
+<tr>
+<td>108</td>
+<td>基于电子病历的医院信息平台技术规范</td>
+<td>WS/T 447-2014</td>
+</tr>
+<tr>
+<td>109</td>
+<td>居民健康档案医学检验项目常用代码</td>
+<td>WS/T 448-2014</td>
+</tr>
+<tr>
+<td>110</td>
+<td>慢性病监测信息系统基本功能规范</td>
+<td>WS/T 449-2014</td>
+</tr>
+<tr>
+<td>111</td>
+<td>院前医疗急救指挥信息系统基本功能规范</td>
+<td>WS/T 451-2014</td>
+</tr>
+<tr>
+<td>112</td>
+<td>卫生监督业务信息系统功能规范</td>
+<td>WS/T 452-2014</td>
+</tr>
+<tr>
+<td>113</td>
+<td>卫生机构（组织）分类与代码</td>
+<td>WS 218-2002</td>
+</tr>
+<tr>
+<td>114</td>
+<td>卫生信息共享文档编制规范</td>
+<td>WS/T 482-2016</td>
+</tr>
+<tr>
+<td>115</td>
+<td>健康档案共享文档规范　第1部分：个人基本健康信息登记</td>
+<td>WS/T 483.1-2016</td>
+</tr>
+<tr>
+<td>116</td>
+<td>健康档案共享文档规范　第2部分：预防接种报告</td>
+<td>WS/T 483.2-2016</td>
+</tr>
+<tr>
+<td>117</td>
+<td>健康档案共享文档规范　第3部分：新生儿家庭访视</td>
+<td>WS/T 483.3-2016</td>
+</tr>
+<tr>
+<td>118</td>
+<td>健康档案共享文档规范　第4部分：儿童健康体检</td>
+<td>WS/T 483.4-2016</td>
+</tr>
+<tr>
+<td>119</td>
+<td>健康档案共享文档规范　第5部分：首次产前随访服务</td>
+<td>WS/T 483.5-2016</td>
+</tr>
+<tr>
+<td>120</td>
+<td>健康档案共享文档规范　第6部分：产前随访服务</td>
+<td>WS/T 483.6-2016</td>
+</tr>
+<tr>
+<td>121</td>
+<td>健康档案共享文档规范　第7部分：产后访视</td>
+<td>WS/T 483.7-2016</td>
+</tr>
+<tr>
+<td>122</td>
+<td>健康档案共享文档规范　第8部分：产后42天健康体检</td>
+<td>WS/T 483.8-2016</td>
+</tr>
+<tr>
+<td>123</td>
+<td>健康档案共享文档规范　第9部分：预防接种报告</td>
+<td>WS/T 483.9-2016</td>
+</tr>
+<tr>
+<td>124</td>
+<td>健康档案共享文档规范　第11部分：死亡医学证明</td>
+<td>WS/T 483.11-2016</td>
+</tr>
+<tr>
+<td>125</td>
+<td>健康档案共享文档规范　第12部分：高血压患者随访</td>
+<td>WS/T 483.12-2016</td>
+</tr>
+<tr>
+<td>126</td>
+<td>健康档案共享文档规范　第13部分：2型糖尿病患者随访服务</td>
+<td>WS/T 483.13-2016</td>
+</tr>
+<tr>
+<td>127</td>
+<td>健康档案共享文档规范　第14部分：重性精神病患者个人信息登记</td>
+<td>WS/T 483.14-2016</td>
+</tr>
+<tr>
+<td>128</td>
+<td>健康档案共享文档规范　第15部分：重性精神疾病患者随访服务</td>
+<td>WS/T 483.15-2016</td>
+</tr>
+<tr>
+<td>129</td>
+<td>健康档案共享文档规范　第16部分：成人健康体检</td>
+<td>WS/T 483.16-2016</td>
+</tr>
+<tr>
+<td>130</td>
+<td>健康档案共享文档规范　第17部分：门诊摘要</td>
+<td>WS/T 483.17-2016</td>
+</tr>
+<tr>
+<td>131</td>
+<td>健康档案共享文档规范　第18部分：住院摘要</td>
+<td>WS/T 483.18-2016</td>
+</tr>
+<tr>
+<td>132</td>
+<td>健康档案共享文档规范　第19部分：会诊记录</td>
+<td>WS/T 483.19-2016</td>
+</tr>
+<tr>
+<td>133</td>
+<td>健康档案共享文档规范　第20部分：转诊（院）记录</td>
+<td>WS/T 483.20-2016</td>
+</tr>
+<tr>
+<td>134</td>
+<td>电子病历共享文档规范　第1部分：病历概要</td>
+<td>WS/T 500.1-2016</td>
+</tr>
+<tr>
+<td>135</td>
+<td>电子病历共享文档规范　第2部分：门（急）诊病历</td>
+<td>WS/T 500.2-2016</td>
+</tr>
+<tr>
+<td>136</td>
+<td>电子病历共享文档规范　第3部分：急诊留观病历</td>
+<td>WS/T 500.3-2016</td>
+</tr>
+<tr>
+<td>137</td>
+<td>电子病历共享文档规范　第4部分：西药处方</td>
+<td>WS/T 500.4-2016</td>
+</tr>
+<tr>
+<td>138</td>
+<td>电子病历共享文档规范　第5部分：中药处方</td>
+<td>WS/T 500.5-2016</td>
+</tr>
+<tr>
+<td>139</td>
+<td>电子病历共享文档规范　第6部分：检查报告</td>
+<td>WS/T 500.6-2016</td>
+</tr>
+<tr>
+<td>140</td>
+<td>电子病历共享文档规范　第7部分：检验报告</td>
+<td>WS/T 500.7-2016</td>
+</tr>
+<tr>
+<td>141</td>
+<td>电子病历共享文档规范　第8部分：治疗记录</td>
+<td>WS/T 500.8-2016</td>
+</tr>
+<tr>
+<td>142</td>
+<td>电子病历共享文档规范　第9部分：一般手术记录</td>
+<td>WS/T 500.9-2016</td>
+</tr>
+<tr>
+<td>143</td>
+<td>电子病历共享文档规范　第10部分：麻醉术前访视记录</td>
+<td>WS/T 500.10-2016</td>
+</tr>
+<tr>
+<td>144</td>
+<td>电子病历共享文档规范　第11部分：麻醉记录</td>
+<td>WS/T 500.11-2016</td>
+</tr>
+<tr>
+<td>145</td>
+<td>电子病历共享文档规范　第12部分：麻醉术后访视记录</td>
+<td>WS/T 500.12-2016</td>
+</tr>
+<tr>
+<td>146</td>
+<td>电子病历共享文档规范　第13部分：输血记录</td>
+<td>WS/T 500.13-2016</td>
+</tr>
+<tr>
+<td>147</td>
+<td>电子病历共享文档规范　第14部分：待产记录</td>
+<td>WS/T 500.14-2016</td>
+</tr>
+<tr>
+<td>148</td>
+<td>电子病历共享文档规范　第15部分：阴道分娩记录</td>
+<td>WS/T 500.15-2016</td>
+</tr>
+<tr>
+<td>149</td>
+<td>电子病历共享文档规范　第16部分：剖宫产记录</td>
+<td>WS/T 500.16-2016</td>
+</tr>
+<tr>
+<td>150</td>
+<td>电子病历共享文档规范　第17部分：一般护理记录</td>
+<td>WS/T 500.17-2016</td>
+</tr>
+<tr>
+<td>151</td>
+<td>电子病历共享文档规范　第18部分：病重（病危）护理记录</td>
+<td>WS/T 500.18-2016</td>
+</tr>
+<tr>
+<td>152</td>
+<td>电子病历共享文档规范　第19部分：手术护理记录</td>
+<td>WS/T 500.19-2016</td>
+</tr>
+<tr>
+<td>153</td>
+<td>电子病历共享文档规范　第20部分：生命体征测量记录</td>
+<td>WS/T 500.20-2016</td>
+</tr>
+<tr>
+<td>154</td>
+<td>电子病历共享文档规范　第21部分：出入量记录</td>
+<td>WS/T 500.21-2016</td>
+</tr>
+<tr>
+<td>155</td>
+<td>电子病历共享文档规范　第22部分：高值耗材使用记录</td>
+<td>WS/T 500.22-2016</td>
+</tr>
+<tr>
+<td>156</td>
+<td>电子病历共享文档规范　第23部分：入院评估</td>
+<td>WS/T 500.23-2016</td>
+</tr>
+<tr>
+<td>157</td>
+<td>电子病历共享文档规范　第24部分：护理计划</td>
+<td>WS/T 500.24-2016</td>
+</tr>
+<tr>
+<td>158</td>
+<td>电子病历共享文档规范　第25部分：出院评估与指导</td>
+<td>WS/T 500.25-2016</td>
+</tr>
+<tr>
+<td>159</td>
+<td>电子病历共享文档规范　第26部分：手术同意书</td>
+<td>WS/T 500.26-2016</td>
+</tr>
+<tr>
+<td>160</td>
+<td>电子病历共享文档规范　第27部分：麻醉知情同意书</td>
+<td>WS/T 500.27-2016</td>
+</tr>
+<tr>
+<td>161</td>
+<td>电子病历共享文档规范　第28部分：输血治疗同意书</td>
+<td>WS/T 500.28-2016</td>
+</tr>
+<tr>
+<td>162</td>
+<td>电子病历共享文档规范　第29部分：特殊检查及特殊治疗同意书</td>
+<td>WS/T 500.29-2016</td>
+</tr>
+<tr>
+<td>163</td>
+<td>电子病历共享文档规范　第30部分：病危（重）通知书</td>
+<td>WS/T 500.30-2016</td>
+</tr>
+<tr>
+<td>164</td>
+<td>电子病历共享文档规范　第31部分：其他知情告知同意书</td>
+<td>WS/T 500.31-2016</td>
+</tr>
+<tr>
+<td>165</td>
+<td>电子病历共享文档规范　第32部分：住院病案首页</td>
+<td>WS/T 500.32-2016</td>
+</tr>
+<tr>
+<td>166</td>
+<td>电子病历共享文档规范　第33部分：中医住院病案首页</td>
+<td>WS/T 500.33-2016</td>
+</tr>
+<tr>
+<td>167</td>
+<td>电子病历共享文档规范　第34部分：入院记录</td>
+<td>WS/T 500.34-2016</td>
+</tr>
+<tr>
+<td>168</td>
+<td>电子病历共享文档规范　第35部分：24小时内入出院</td>
+<td>WS/T 500.35-2016</td>
+</tr>
+<tr>
+<td>169</td>
+<td>电子病历共享文档规范　第36部分：24小时内入院死亡记录</td>
+<td>WS/T 500.36-2016</td>
+</tr>
+<tr>
+<td>170</td>
+<td>电子病历共享文档规范　第37部分：住院病程记录首次病程记录</td>
+<td>WS/T 500.37-2016</td>
+</tr>
+<tr>
+<td>171</td>
+<td>电子病历共享文档规范　第38部分：住院病程记录日常病程记录</td>
+<td>WS/T 500.38-2016</td>
+</tr>
+<tr>
+<td>172</td>
+<td>电子病历共享文档规范　第39部分：住院病程记录上级医师查房记录</td>
+<td>WS/T 500.39-2016</td>
+</tr>
+<tr>
+<td>173</td>
+<td>电子病历共享文档规范　第40部分：住院病程记录疑难病例讨论记录</td>
+<td>WS/T 500.40-2016</td>
+</tr>
+<tr>
+<td>174</td>
+<td>电子病历共享文档规范　第41部分：住院病程记录交接班记录</td>
+<td>WS/T 500.41-2016</td>
+</tr>
+<tr>
+<td>175</td>
+<td>电子病历共享文档规范　第42部分：住院病程记录转科记录</td>
+<td>WS/T 500.42-2016</td>
+</tr>
+<tr>
+<td>176</td>
+<td>电子病历共享文档规范　第43部分：住院病程记录阶段小结</td>
+<td>WS/T 500.43-2016</td>
+</tr>
+<tr>
+<td>177</td>
+<td>电子病历共享文档规范　第44部分：住院病程记录抢救记录</td>
+<td>WS/T 500.44-2016</td>
+</tr>
+<tr>
+<td>178</td>
+<td>电子病历共享文档规范　第45部分：住院病程记录会诊记录</td>
+<td>WS/T 500.45-2016</td>
+</tr>
+<tr>
+<td>179</td>
+<td>电子病历共享文档规范　第46部分：住院病程记录术前小结</td>
+<td>WS/T 500.46-2016</td>
+</tr>
+<tr>
+<td>180</td>
+<td>电子病历共享文档规范　第47部分：住院病程记录术前讨论</td>
+<td>WS/T 500.47-2016</td>
+</tr>
+<tr>
+<td>181</td>
+<td>电子病历共享文档规范　第48部分：住院病程记录术后首次病程记录</td>
+<td>WS/T 500.48-2016</td>
+</tr>
+<tr>
+<td>182</td>
+<td>电子病历共享文档规范　第49部分：住院病程记录出院记录</td>
+<td>WS/T 500.49-2016</td>
+</tr>
+<tr>
+<td>183</td>
+<td>电子病历共享文档规范　第50部分：住院病程记录死亡记录</td>
+<td>WS/T 500.50-2016</td>
+</tr>
+<tr>
+<td>184</td>
+<td>电子病历共享文档规范　第51部分：住院病程记录死亡病例讨论记录</td>
+<td>WS/T 500.51-2016</td>
+</tr>
+<tr>
+<td>185</td>
+<td>电子病历共享文档规范　第52部分：住院医嘱</td>
+<td>WS/T 500.52-2016</td>
+</tr>
+<tr>
+<td>186</td>
+<td>电子病历共享文档规范　第53部分：出院小结</td>
+<td>WS/T 500.53-2016</td>
+</tr>
+<tr>
+<td>187</td>
+<td>电子病历与医院信息平台标准符合性测试规范</td>
+<td>WS/T 501-2016</td>
+</tr>
+<tr>
+<td>188</td>
+<td>电子健康档案与区域卫生信息平台标准符合性测试规范</td>
+<td>WS/T 502-2016</td>
+</tr>
+<tr>
+<td>189</td>
+<td>基层医疗卫生信息系统基本功能规范</td>
+<td>WS/T 517-2016</td>
+</tr>
+<tr>
+<td>190</td>
+<td>妇幼保健信息系统基本功能规范</td>
+<td>WS/T 526-2016</td>
+</tr>
+<tr>
+<td>191</td>
+<td>远程医疗信息系统基本功能规范</td>
+<td>WS/T 529-2016</td>
+</tr>
+<tr>
+<td>192</td>
+<td>居民健康卡数据集</td>
+<td>WS 537-2017</td>
+</tr>
+<tr>
+<td>193</td>
+<td>医学数字影像通信基本数据集</td>
+<td>WS 538-2017</td>
+</tr>
+<tr>
+<td>194</td>
+<td>远程医疗信息基本数据集</td>
+<td>WS 539-2017</td>
+</tr>
+<tr>
+<td>195</td>
+<td>继续医学教育管理基本数据集</td>
+<td>WS 540-2017</td>
+</tr>
+<tr>
+<td>196</td>
+<td>院前医疗急救基本数据集</td>
+<td>WS 542-2017</td>
+</tr>
+<tr>
+<td>197</td>
+<td>居民健康卡技术规范　第1部分：总则</td>
+<td>WS/T 543.1-2017</td>
+</tr>
+<tr>
+<td>198</td>
+<td>居民健康卡技术规范　第2部分：用户卡技术规范</td>
+<td>WS/T 543.2-2017</td>
+</tr>
+<tr>
+<td>199</td>
+<td>居民健康卡技术规范　第3部分：用户卡应用规范</td>
+<td>WS/T 543.3-2017</td>
+</tr>
+<tr>
+<td>200</td>
+<td>居民健康卡技术规范　第4部分：用户卡命令集</td>
+<td>WS/T 543.4-2017</td>
+</tr>
+<tr>
+<td>201</td>
+<td>居民健康卡技术规范　第5部分：终端技术规范</td>
+<td>WS/T 543.5-2017</td>
+</tr>
+<tr>
+<td>202</td>
+<td>居民健康卡技术规范　第6部分：用户卡及终端产品检测规范</td>
+<td>WS/T 543.6-2017</td>
+</tr>
+<tr>
+<td>203</td>
+<td>医学数字影像中文封装与通信规范</td>
+<td>WS/T 544-2017</td>
+</tr>
+<tr>
+<td>204</td>
+<td>远程医疗信息系统技术规范</td>
+<td>WS/T 545-2017</td>
+</tr>
+<tr>
+<td>205</td>
+<td>远程医疗信息系统与统一通信交互规范</td>
+<td>WS/T 546-2017</td>
+</tr>
+<tr>
+<td>206</td>
+<td>医院感染管理信息系统基本功能规范</td>
+<td>WS/T 547-2017</td>
+</tr>
+<tr>
+<td>207</td>
+<td>医学数字影像通信（DICOM）中文标准符合性测试规范</td>
+<td>WS/T 548-2017</td>
+</tr>
+<tr>
+<td>208</td>
+<td>卫生统计指标　第1部分：总则</td>
+<td>WS/T 598.1-2018</td>
+</tr>
+<tr>
+<td>209</td>
+<td>卫生统计指标　第2部分：健康状况</td>
+<td>WS/T 598.2-2018</td>
+</tr>
+<tr>
+<td>210</td>
+<td>卫生统计指标　第3部分：健康影响因素</td>
+<td>WS/T 598.3-2018</td>
+</tr>
+<tr>
+<td>211</td>
+<td>卫生统计指标　第4部分：疾病控制</td>
+<td>WS/T 598.4-2018</td>
+</tr>
+<tr>
+<td>212</td>
+<td>卫生统计指标　第5部分：妇幼保健</td>
+<td>WS/T 598.5-2018</td>
+</tr>
+<tr>
+<td>213</td>
+<td>卫生统计指标　第6部分：卫生监督</td>
+<td>WS/T 598.6-2018</td>
+</tr>
+<tr>
+<td>214</td>
+<td>卫生统计指标　第7部分：医疗服务(含中医)</td>
+<td>WS/T 598.7-2018</td>
+</tr>
+<tr>
+<td>215</td>
+<td>卫生统计指标　第8部分：药品与材料供应保障</td>
+<td>WS/T 598.8-2018</td>
+</tr>
+<tr>
+<td>216</td>
+<td>卫生统计指标　第9部分：医疗保障新农合</td>
+<td>WS/T 598.9-2018</td>
+</tr>
+<tr>
+<td>217</td>
+<td>人口死亡信息登记系统基本功能规范</td>
+<td>WS/T 596-2018</td>
+</tr>
+<tr>
+<td>218</td>
+<td>医院人财物运营管理基本数据集　第1部分：医院人力资源管理</td>
+<td>WS 599.1-2018</td>
+</tr>
+<tr>
+<td>219</td>
+<td>医院人财物运营管理基本数据集　第2部分：医院财务与成本核算管理</td>
+<td>WS 599.2-2018</td>
+</tr>
+<tr>
+<td>220</td>
+<td>医院人财物运营管理基本数据集　第3部分：医院物资管理</td>
+<td>WS 599.3-2018</td>
+</tr>
+<tr>
+<td>221</td>
+<td>医院人财物运营管理基本数据集　第4部分：医院固定资产管理</td>
+<td>WS 599.4-2018</td>
+</tr>
+<tr>
+<td>222</td>
+<td>医学数字影像虚拟打印服务规范</td>
+<td>WS/T 597-2018</td>
+</tr>
+<tr>
+<td>223</td>
+<td>国家卫生与人口信息数据字典</td>
+<td>WS/T 671-2020</td>
+</tr>
+<tr>
+<td>224</td>
+<td>国家卫生与人口信息概念数据模型</td>
+<td>WS/T 672-2020</td>
+</tr>
+<tr>
+<td>225</td>
+<td>妇女保健基本数据集 第8部分：孕前优生健康检查</td>
+<td>WS 377.8-2020</td>
+</tr>
+<tr>
+<td>226</td>
+<td>卫生信息标识体系 对象标识符注册管理规程</td>
+<td>WS/T 681-2020</td>
+</tr>
+<tr>
+<td>227</td>
+<td>卫生信息标识体系 对象标识符编号结构与基本规则</td>
+<td>WS/T 682-2020</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://cnki-laoma.github.io/post/shuo-shuo-lesslesschang-yong-lin-chuang-yi-xue-ming-ci-2019-ban-greatergreater/">
+                <h3 class="post-title">
+                  说说《常用临床医学名词（2019年版）》
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '8c7eeee170372e7eb0b9',
+    clientSecret: '02f0d258e18d6b6770da622b23025bb48af5fc6a',
+    repo: 'Smart-Medicine',
+    owner: 'CNKI-LaoMa',
+    admin: ['CNKI-LaoMa'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="https://cnki-laoma.github.io/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>
